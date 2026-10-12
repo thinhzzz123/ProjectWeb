@@ -1,0 +1,229 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+   font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+.footer{
+    width: 100%;
+    min-height: 218px;
+    background-color: rgba(234, 251, 255, 0.92);
+    border-top: 1px solid rgba(254, 243, 199, 1);
+    padding: 30px 0;
+}
+.footer-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.logo img {
+    max-width: 180px;
+}
+.logo p{
+    margin-left: 0;
+    max-width: 250px;
+    line-height: 1.5;
+}
+.footer-col{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.footer-col h3{
+    font-weight: 600;
+    font-size: 18px;
+    color: rgba(120, 53, 15, 1);
+    margin-bottom: 8px;
+}
+
+
+
+/* Tablet Small - 800px: Layout dọc */
+@media (max-width: 800px) {
+    .footer {
+        padding: 25px 0;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+        padding: 0 15px;
+    }
+    
+    .logo {
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    
+    .logo img {
+        max-width: 300px;
+    }
+
+    .logo p{
+        font-size: 16px;
+        max-width: 320px;
+    }
+    
+    .footer-col {
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .footer-col h3 {
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+}
+
+/* Mobile Large - 600px */
+@media (max-width: 600px) {
+    .footer {
+        padding: 20px 0;
+    }
+    
+    .footer-container {
+        gap: 20px;
+        padding: 0 10px;
+    }
+    
+    .logo img {
+        max-width: 140px;
+    }
+    
+    .logo p {
+        font-size: 14px;
+        max-width: 280px;
+    }
+    
+    .footer-col h3 {
+        font-size: 15px;
+    }
+    
+    .footer-col a,
+    .footer-col p {
+        font-size: 13px;
+    }
+}
+
+/* Mobile Small - 400px */
+@media (max-width: 400px) {
+    .footer {
+        padding: 18px 0;
+    }
+    
+    .footer-container {
+        gap: 18px;
+        padding: 0 8px;
+    }
+    
+    .logo img {
+        max-width: 120px;
+    }
+    
+    .logo p {
+        font-size: 13px;
+        max-width: 260px;
+    }
+    
+    .footer-col h3 {
+        font-size: 14px;
+    }
+    
+    .footer-col a,
+    .footer-col p {
+        font-size: 12px;
+    }
+}
+.logo p{
+    font-weight: 500;
+    color: rgba(120, 53, 15, 1);
+    font-size: 14px;
+}
+
+.footer-col p{
+    font-weight: 500;
+    color: rgba(120, 53, 15, 1);
+    font-size: 14px;
+    margin: 4px 0;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.footer-col p:hover {
+    color: rgba(255, 112, 67, 1);
+}
+.btn{
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(to right, rgba(245, 156, 52, 1), rgba(255, 77, 23, 1));
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    text-decoration: none;
+}
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 112, 67, 0.4);
+}
+.footer-bottom{
+    text-align: center;
+    font-size: 14px;
+
+}
+hr{
+  margin: 25px 0 15px 0;    /* khoảng cách trên dưới */
+  border: none;              /* bỏ đường viền mặc định */
+  height: 2px;               /* độ dày */
+  background-color: rgba(90, 44, 12, 0.2); /* màu nâu nhạt, hơi trong suốt */
+  width: 90%;                /* không kéo hết chiều ngang */
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 2px;
+}
+
+
+.footer-link {
+    display: block;     
+    color: rgba(120, 53, 15, 1);     
+    text-decoration: none;  
+    margin-bottom: 8px;     
+    transition: color 0.3s, transform 0.2s;
+    font-size: 16px;         /
+}
+
+
+.footer-link:hover {
+    color: #D97706;         
+    transform: translateX(5px);
+}
+
+
+.logo a img {
+    border: none;
+    outline: none;
+}
+

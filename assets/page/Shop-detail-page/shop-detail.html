@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title data-i18n="pageTitle">Chi tiết quán</title>
+
+  <link rel="stylesheet" href="card.css">
+  <link rel="stylesheet" type="text/css" href="shop-detail.css">
+  <link rel="stylesheet" href="/assets/component/header-footer/header.css?v=2">
+  <link rel="stylesheet" href="/assets/component/header-footer/footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="lang-switcher-root"></div>
+  <div id="header" class="header"></div>
+  <div id="loading-container" class="loading-container">
+    <div class="loading-spinner"></div>
+    <p>Đang tải thông tin quán...</p>
+  </div>
+  <div id="main-content" class="shopdetail_main-container">
+    <div class="shopdetail_title-container">
+      <div class="shopdetail_title">
+        <h1 class="pacifico-regular"></h1>
+      </div>
+      <button class="favorite-button"  aria-label="Favorite">
+        <span class="favorite-text" data-i18n="addToFavorites">Thêm vào yêu thích</span>
+        <i class="fa-regular fa-heart favorite-icon"></i>
+      </button>
+
+    </div>
+   <div class="shopdetail_gallery-container">
+      <div class="slider-column">
+        <img src="/assets/image/Shop-detail-page/Hình ảnh quán cafe.png" data-i18n-alt="gallery.mainAlt"
+          alt="shop main">
+        <button class="arrow-left" aria-label="previous" data-i18n-value="ui.prevButton">
+          <i class="fa-solid fa-circle-chevron-left"></i>
+        </button>
+        <button class="arrow-right" aria-label="next" data-i18n-value="ui.nextButton">
+          <i class="fa-solid fa-circle-chevron-right"></i>
+        </button>
+    </div>
+      <div class="grid-column">
+        <img src="/assets/image/Shop-detail-page/Hình ảnh quán cafe (4).png" data-i18n-alt="gallery.thumbAlts.3" alt="">
+        <img src="/assets/image/Shop-detail-page/Hình ảnh quán cafe (3).png" alt="">
+        <img src="/assets/image/Shop-detail-page/Hình ảnh quán cafe (2).png" alt="">
+        <img src="/assets/image/Shop-detail-page/Hình ảnh quán cafe (1).png" alt="">
+      </div>
+    </div>
+  
+    <div class="shop-info-card">
+      <div class="info-section name-section">
+        <div class="info-label">
+          <i class="fas fa-store"></i>
+          <span data-i18n="labels.nameLabel">Tên quán:</span>
+        </div>
+        <h2 class="shop-name"></h2>
+      </div>
+
+      
+      <div class="info-section tags-section">
+        <div class="info-label">
+          <i class="fas fa-tags"></i>
+          <span data-i18n="labels.typeLabel">Loại:</span>
+        </div>
+        <div class="shop-tags">
+        </div>
+      </div>
+
+      
+      <div class="info-row">
+        <div class="info-section address-section">
+          <div class="info-label">
+            <i class="fas fa-map-marker-alt"></i>
+            <span data-i18n="labels.addressLabel">Địa chỉ:</span>
+          </div>
+          <p class="address-text"></p>
+          <button class="direction-btn" data-i18n="labels.directionButton">
+            <i class="fas fa-directions"></i>
+            Chỉ đường
+          </button>
+        </div>
+
+      
+        <div class="info-section rating-section">
+          <div class="info-label">
+            <i class="fas fa-star"></i>
+            <span data-i18n="labels.rateLabel">Đánh giá:</span>
+          </div>
+          <div class="rating-display">
+            <span class="rating-value"></span>
+            <div class="rating-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p class="shopdetail_sub-title" data-i18n="detailsTitle">Thông tin chi tiết</p>
+    </div>
+    <div class="shopdetail_sub-container">
+      <div class="detail_info-container">
+        <nav class="shopdetail_info-tabs">
+          <button class="detail_tab-link active" data-tab="mo-ta" data-i18n="tabs.description">Mô tả</button>
+          <button class="detail_tab-link" data-tab="menu" data-i18n="tabs.menu">Menu</button>
+          <button class="detail_tab-link" data-tab="tien-ich" data-i18n="tabs.amenities">Tiện ích</button>
+          <button class="detail_tab-link" data-tab="khoang-gia" data-i18n="tabs.priceRange">Khoảng giá</button>
+        </nav>
+        <div class="shopdetail_tab-content-wrapper">
+          <div id="mo-ta" class="shopdetail_tab-content active">
+            <div class="shopdetail_text">
+              <p data-i18n="descriptionParagraphs.0">Café Artisan Saigon là một không gian nghệ thuật độc đáo, nơi hương
+                vị cà phê hảo hạng hòa quyện cùng thiết kế tối giản hiện đại.</p>
+              <p data-i18n="descriptionParagraphs.1">Mỗi góc quán đều được chăm chút tỉ mỉ, tạo nên một trải nghiệm thư
+                giãn và đầy cảm hứng.</p>
+              <p data-i18n="descriptionParagraphs.2">Chúng tôi tự hào về nguồn cà phê specialty được tuyển chọn từ các
+                vùng trồng nổi tiếng, rang xay thủ công mỗi ngày để mang đến hương vị tươi mới nhất.</p>
+              <p data-i18n="descriptionParagraphs.3">Đội ngũ barista giàu kinh nghiệm luôn sẵn sàng pha chế những tách
+                cà phê hoàn hảo theo sở thích của bạn.</p>
+              <p data-i18n="descriptionParagraphs.4">Không gian rộng rãi với ánh sáng tự nhiên tràn ngập, cùng hệ thống
+                wifi tốc độ cao và nhiều ổ cắm điện thuận tiện, đây là địa điểm lý tưởng cho cả những buổi làm việc hay
+                gặp gỡ bạn bè.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="cafe-list-section">
+        <div class="header-row">
+          <h3 data-i18n="similarSection.title">Tương tự</h3>
+          <a href="..\cafe-list\cafe-list.html" class="view-all" data-i18n="similarSection.viewAll">Xem tất cả →</a>
+        </div>
+
+        <div class="similar-cards-container">
+        </div>
+      </section>
+  </div> 
+  
+  <div id="footer" class="footer"></div>
+
+  <script src="/assets/locale/lang-switcher.js"></script>
+  <script src="/assets/component/header-footer/header-loader.js"></script>
+  <script src="/main.js"></script>
+  <script src="shop-detail.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoffeeFinder Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="card.css">
+</head>
+<body class="allcode">
+    <h2 class="cfadmin">CoffeeFinder Admin</h2>
+    <img class="picture" src="../../image/thinh/Background+Shadow.png" alt="Background">
+    <div class="welcome-container">
+        <div class="avatar">A</div>
+        <div class="welcome-text">
+            <p class="welcome-title">Chào mừng trở lại, ADMIN</p>
+            <p class="welcome-subtitle">Quản lý hệ thống quán cafe</p>
+        </div>
+    </div>
+    <p class="new-prj">Dự án mới</p>
+    <div class="main-container">
+        <div class="left-column">
+            <div class="add-section">
+            <a href="../add-detail-page/Add-details-page.html">
+                <button class="add-button">+</button></a>
+                <h3 class="add-title">THÊM</h3>
+                <p class="add-subtitle">Thêm quán cafe mới</p>
+            </div>
+            <div class="recent-section">
+                <h3>Recent</h3>
+                <div class="recent-items">
+                    <div class="recent-card">
+                        <img src="" alt="">
+                        <p>Recent<br>1</p>
+                    </div>
+                     <div class="recent-card">
+                        <img src="" alt="">
+                        <p>Recent<br>1</p>
+                    </div>
+                     <div class="recent-card">
+                        <img src="" alt="">
+                        <p>Recent<br>1</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="right-column">
+            <div class="note-section">
+                <h3>Note:</h3>
+                <textarea placeholder="Ghi chú quản trị..."></textarea>
+            </div>
+            <div class="stats-card">
+                <div class="stats-label">Tổng số quán cafe</div>
+                <div class="stats-number" id="total-cafes">0</div>
+                <div class="stats-update" id="last-update">Đang tải...</div>
+            </div>
+        </div>
+    </div>
+    <section class="cafe-list-section">
+        <div class="header-row">
+            <h3>Quản lý quán cafe</h3>
+            <div class="admin-controls">
+                <input type="text" id="search-input" placeholder="Tìm kiếm quán cafe..." class="search-input">
+                <button id="refresh-btn" class="btn-refresh"><i class="fas fa-sync-alt"></i> Refresh</button>
+                <a href="#" class="view-all">Xem tất cả →</a>
+            </div>
+        </div>
+
+        <div class="loading-container" id="loading" style="display: none;">
+            <div class="loading-spinner"></div>
+            <p>Đang tải dữ liệu...</p>
+        </div>
+
+        <div class="card-container" id="card-container">
+            <!-- Cards will be loaded dynamically via JavaScript -->
+        </div>
+
+        <div class="no-data" id="no-data" style="display: none;">
+            <i class="fas fa-coffee"></i>
+            <h3>Chưa có quán cafe nào</h3>
+            <p>Bấm nút "THÊM" để thêm quán cafe đầu tiên</p>
+        </div>
+    </section>
+
+    <!-- Modal for Delete Confirmation -->
+    <div id="delete-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-exclamation-triangle"></i> Xác nhận xóa</h3>
+                <span class="modal-close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p>Bạn có chắc chắn muốn xóa quán cafe này không?</p>
+                <p class="warning-text">Hành động này không thể hoàn tác!</p>
+            </div>
+            <div class="modal-footer">
+                <button id="cancel-delete" class="btn-secondary">
+                    <i class="fas fa-times"></i> Hủy
+                </button>
+                <button id="confirm-delete" class="btn-danger">
+                    <i class="fas fa-trash"></i> Xóa
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading" class="loading-overlay" style="display: none;">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p>Đang tải dữ liệu...</p>
+        </div>
+    </div>
+
+    <!-- No Data Message -->
+    <div id="no-data" class="no-data" style="display: none;">
+        <div class="no-data-content">
+            <i class="fas fa-search"></i>
+            <h3>Không tìm thấy kết quả</h3>
+            <p>Thử tìm kiếm với từ khóa khác hoặc kiểm tra lại bộ lọc.</p>
+        </div>
+    </div>
+
+    <script src="admin-new.js"></script>
+</body>
+</html>

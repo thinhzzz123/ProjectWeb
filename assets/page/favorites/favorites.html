@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="pageTitle">Quán yêu thích - CoffeeFinder</title>
+    
+    <link rel="stylesheet" href="favorites.css">
+    <link rel="stylesheet" href="/assets/component/header-footer/header.css?v=2">
+    <link rel="stylesheet" href="/assets/component/header-footer/footer.css">
+    <link rel="stylesheet" href="/assets/component/card/card.css">
+    <link rel="stylesheet" href="/assets/component/floating-search-btn/floating-search.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body class="all">
+    <div id="lang-switcher-root"></div>
+    
+    <div id="header" class="header"></div>
+    
+    <div class="security-favorite">
+        <img class="picture1" src="../../image/thinh/Gradient+OverlayBlur.png" alt="Background">
+        <img class="picture2" src="../../image/thinh/Ellipse 1.png" alt="Decoration">
+        <h1 class="saved" data-i18n="header.title">Nơi lưu giữ của riêng bạn!</h1>
+        <p class="desinations" data-i18n="header.subtitle">Đang tải bộ sưu tập...</p>
+    </div>
+    
+    <div class="collection">
+        <h2 class="collect-mini" data-i18n="collection.title">Bộ sưu tập của bạn</h2>
+    </div>
+    
+    <p class="review" data-i18n="collection.description">Xem lại những điểm đến bạn đã lưu</p>
+    
+    <div class="card-container">
+        <div class="favorites-grid" id ="favoritesList">
+
+        </div>
+        <div class="pagination" id="pagination"></div>
+    </div>
+    
+    <!-- <div class="pagination">
+        <button class="btn-page">1</button>
+        <button class="btn-page">2</button>
+        <button class="btn-page">3</button>
+        <button class="btn-page">4</button>
+        <button class="btn-page" data-i18n-aria="pagination.next">
+            <i class="fa-solid fa-angle-right"></i>
+        </button>
+    </div> --> 
+    
+    <div class="floating-search-btn" onclick="window.location.href='../../../index.html#search-section'">
+        <i class="fas fa-search"></i>
+        <span data-i18n="floatingSearch.label">Tìm kiếm theo nhu cầu</span>
+    </div>
+    
+    <div id="footer" class="footer"></div>
+
+    <script src="/assets/locale/lang-switcher.js"></script>
+    <script src="/assets/component/header-footer/header-loader.js"></script>
+    <script src="favorites.js"></script> 
+    <script src="/main.js"></script>
+</body>
+</html>
